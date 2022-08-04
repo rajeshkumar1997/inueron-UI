@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+    --primaryColor: #253472;
+    --secondaryColor: #F28900;
+    --whiteColor: #ffffff;
+    --commonBgColor: #F4F7FF;
+    --commonShadow: 0 3px 20px rgb(0, 0, 0, 0.08);
+    --secondaryFont: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FBFAFA;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--commonBgColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+}
+
+p, button, a {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.sectionPadding {
+    padding: 0 50px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.bannerSearch::-webkit-input-placeholder { /* Edge */
+    font-size: 20px;
+    opacity: 0.8;
+}
+  
+.bannerSearch:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 20px;
+    opacity: 0.8;
+}
+  
+.bannerSearch::placeholder {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.commonBtn {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    padding: 10px 33px;
+    margin: 30px 0 0;
+}
+
+.commonBtn:hover, .commonBtn:active, .commonBtn:focus {
+    background-color: transparent;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+
+/*------------ Header ------------*/
+.header {
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header .navbar-expand-lg .navbar-collapse {
+    justify-content: space-between;
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav {
+    padding: 0 0 0 50px;
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item a {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 6px 20px;
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item a:hover {
+    color: var(--primaryColor);
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item a:focus-visible {
+    outline: none;
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item a.active {
+    font-weight: 600;
+    color: var(--primaryColor);
+    position: relative;
+}
+
+.header .navbar-expand-lg .navbar-collapse .navbar-nav .nav-item a.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: var(--primaryColor);
+    left: 50%;
+    top: 29px;
+    transform: translate(-50%);
+}
+
+.header .headerBtnGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.header .headerBtnGroup .signBtn {
+    background-color: transparent;
+    padding: 6px 14px;
+    font-size: 16px;
+    border: none;
+}
+
+.header .headerBtnGroup .signBtn.active {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+/*------------ End Header ------------*/
+
+.bannerContainer {
+    background-image: url(../img/bannerBg.png);
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerInner {
+    padding: 100px 0 120px;
+}
+
+.bannerCircleLeft {
+    position: absolute;
+    top: -110px;
+    left: -3%;
+    height: 335px;
+    z-index: -1;
+}
+
+.bannerCircleRight {
+    position: absolute;
+    top: -165px;
+    right: -9%;
+    height: 471px;
+    z-index: -1;
+}
+
+.bannerCircleBottom {
+    position: absolute;
+    bottom: -130px;
+    right: -9%;
+    height: 471px;
+    z-index: -1;
+}
+
+.bannerLeftRightContent {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bannerLeftContent {
+    width: 50%;
+}
+
+.searchContainer {
+    position: relative;
+    max-width: 600px;
+}
+
+.searchContainer input {
+    padding: 16px 60px 16px 30px;
+    border-radius: 32px;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.4);
+    border: none;
+    box-shadow: var(--commonShadow);
+}
+
+.searchContainer input:focus {
+    background-color: rgb(255, 255, 255, 0.4);
+    box-shadow: none;
+}
+
+.searchContainer img {
+    position: absolute;
+    top: 12px;
+    height: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.bannerLeftContent .bannerContent .subTitle {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 40px 0 0;
+    margin: 0;
+}
+
+.bannerContent h1 {
+    font-size: 66px;
+    font-weight: 700;
+    font-family: var(--secondaryFont);
+}
+
+.bannerContent h1 span {
+    color: var(--secondaryColor);
+}
+
+.bottomTitle {
+    font-size: 20px;
+    margin: 0;
+}
+
+.bannerTechTeam {
+    display: flex;
+    gap: 15px;
+}
+
+.bannerBoxTeam .bannerTeacherBox {
+    position: relative;
+    margin: 0 0 15px;
+}
+
+.bannerBoxTeam .bannerTeacherBox:last-child {
+    margin: 0;
+}
+
+.bannerBoxTeam .bannerTeacherBox img {
+    border-radius: 22px;
+    height: 250px;
+}
+
+.bannerBoxTeam .bannerTeacherBox p {
+    position: absolute;
+    bottom: 6px;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    background: rgb(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 35px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #E9E2E0;
+}
+
+/*------------ Banner ------------*/
+
+
+/*------------ Pure Hardwork ------------*/
+.pureHardworkContainer {
+    position: relative;
+}
+
+.pureHardworkInner {
+    background-color: var(--whiteColor);
+    box-shadow: var(--commonShadow);
+    position: absolute;
+    padding: 20px 30px;
+    top: -64px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pureHardworkCol {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ececec;
+}
+
+.col-12:last-child .pureHardworkCol {
+    border-right: none;
+}
+
+.hardworkIcon img {
+    height: 60px;
+}
+
+.hardworkContent h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hardworkContent p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+/*------------ End Pure Hardwork ------------*/
+
+
+/*------------ Our Achiever ------------*/
+.ourAchieverContainer {
+    padding: 103px 0 0;
+    position: relative;
+}
+
+.ourAchieverContainer .container::before {
+    content: "";
+    position: absolute;
+    background-color: var(--commonBgColor);
+    height: 300px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.ourAchieverInner {
+    background-color: var(--whiteColor);
+    box-shadow: var(--commonShadow);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.sectionSubHeading {
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: var(--secondaryFont);
+}
+
+.ourAchieverLogos {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 20px 30px;
+}
+
+.ourAchieverLogos img {
+    width: 100%;
+}
+
+.moreCompanies {
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.moreCompanies span {
+    font-weight: 500;
+}
+/*------------ End Our Achiever ------------*/
+
+
+/*------------ Hall of fame ------------*/
+.hallFameContainer {
+    padding: 60px 0 0;
+}
+
+.hallFameSlider {
+    background-color: var(--commonBgColor);
+    padding: 50px 0;
+}
+
+.hallFameSlider .slick-list {
+    padding: 0 100px 40px 0 !important;
+}
+
+.userFeedbackForm {
+    background-color: var(--whiteColor);
+    box-shadow: var(--commonShadow);
+    padding: 24px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.userFeedbackForm .quoteImg {
+    position: absolute;
+    height: 100px;
+    z-index: 0;
+    left: 12px;
+    top: 12px;
+}
+
+.userFeedbackForm .userTxt {
+    margin: 30px 0 0;
+}
+
+.userData {
+    margin: 20px 0 0;
+    display: flex;
+    gap: 20px;
+}
+
+.userData .userImg {
+    position: relative;
+}
+
+.userData .userImg a {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+}
+
+.userData .userImg a img {
+    height: 24px;
+}
+
+.userData .userImg .userDp {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.userName p {
+    margin: 0;
+}
+
+.userName .userNameP {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hallFameBoxSpace {
+    padding: 0 15px;
+}
+
+.hallFameSlider .slick-prev {
+    background: var(--whiteColor);
+    top: auto;
+    left: auto;
+    bottom: -62px;
+    right: 112px;
+    z-index: 9999;
+    padding: 26px;
+    border-radius: 10px;
+}
+
+.hallFameSlider .slick-prev::before {
+    content: "";
+    color: var(--primaryColor);
+    background-image: url(../img/arrow.png);
+    z-index: 99999;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    height: 35px;
+    width: 16px;
+    background-repeat: no-repeat;
+}
+
+.hallFameSlider .slick-next {
+    background: var(--whiteColor);
+    top: auto;
+    left: auto;
+    bottom: -62px;
+    right: 50px;
+    z-index: 9999;
+    padding: 26px;
+    border-radius: 10px;
+}
+
+.hallFameSlider .slick-next::before {
+    content: "";
+    color: var(--primaryColor);
+    background-image: url(../img/arrow.png);
+    z-index: 99999;
+    position: absolute;
+    top: 1px;
+    left: 17px;
+    height: 35px;
+    width: 16px;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}
+
+.hallFameViewAll a {
+    color: var(--primaryColor);
+}
+
+.hallFameViewAll a:hover {
+    text-decoration: underline;
+}
+/*------------ End Hall of fame ------------*/
+
+
+/*------------ What you will learn ------------*/
+.learnTabs {
+    display: flex;
+    justify-content: center;
+}
+
+.learnTabs ul li button {
+    color: #000;
+    font-weight: 500;
+    padding: 0 20px;
+    position: relative;
+}
+
+.learnTabs ul li button.active,
+.learnTabs ul li button:hover {
+    background-color: transparent !important;
+    color: var(--secondaryColor) !important;
+}
+
+.learnTabs ul li button.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: var(--secondaryColor);
+    left: 50%;
+    top: 26px;
+    transform: translate(-50%);
+}
+
+.whatLearnLeft {
+    margin: 0 0 0 113px;
+}
+
+.whatLearnLeft img {
+    position: absolute;
+}
+
+.whatLearnLeft h4 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--secondaryFont);
+}
+
+.videoBox img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.videoBoxContent {
+    padding: 20px;
+}
+
+.videoBoxContent p, .videoBoxContent h5, .videoBoxContent span {
+    color: #000;
+}
+
+.videoBoxContent h5 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+}
+
+.videoBoxContent span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.videoSection {
+    padding-bottom: 10px;
+    position: relative;
+}
+/*------------ End What you will learn ------------*/
+
+
+/*------------ Our Products ------------*/
+.ourProductsContainer {
+    padding: 60px 0 0;
+}
+
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productList .userFeedbackForm {
+    flex: 0 0 calc(33% - 20px);
+}
+
+.productList img {
+    height: 100px;
+}
+/*------------ End Our Products ------------*/
+
+
+/*------------ Hackathon Companies ------------*/
+.hackathonCompaniesContainer {
+    padding: 60px 0 0;
+}
+
+.hackathonCompaniesContainer .ourAchieverLogos {
+    grid-template-columns: repeat(7, auto);
+}
+/*------------ End Hackathon Companies ------------*/
+
+
+/*------------ Our Partnered Institutions ------------*/
+.ourPartneredContainer {
+    padding: 60px 0 0;
+}
+
+.ourPartneredContainer .ourAchieverLogos img {
+    height: 100px;
+}
+/*------------ End Our Partnered Institutions ------------*/
+
+
+/*------------ Footer ------------*/
+.footer {
+    background-color: var(--primaryColor);
+    margin-top: 60px;
+    padding: 50px 0;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer ul li a {
+    color: #FBFAFA;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    text-align: center;
+    margin: 0;
+    color: #FBFAFA;
+}
+/*------------ End Footer ------------*/
