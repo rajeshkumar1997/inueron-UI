@@ -10,6 +10,6 @@ This project is created in few technologies
 2) CSS [CSS tutorial](https://www.w3schools.com/css/)
 3) Bootsrap freamwork [Bootsrap tutorial](https://getbootstrap.com/)
 
-# External libraries
+## External libraries
 1) Slick Slider [Slick Slider](https://kenwheeler.github.io/slick/)
 2) Jquery [Jquery](https://jquery.com/)
